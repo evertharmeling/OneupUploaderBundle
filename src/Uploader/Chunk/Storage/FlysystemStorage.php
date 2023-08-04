@@ -26,12 +26,17 @@ class FlysystemStorage implements ChunkStorageInterface
 
     /**
      * @param Filesystem $filesystem
-     * @param int $bufferSize
-     * @param string $streamWrapperPrefix
-     * @param string $prefix
+     * @param int        $bufferSize
+     * @param string     $streamWrapperPrefix
+     * @param string     $prefix
      */
+<<<<<<< HEAD
     public function __construct(protected Filesystem $filesystem, public int $bufferSize, protected string $streamWrapperPrefix, protected string $prefix) {
 >>>>>>> eb0cdf7 (1. Implemented the AsCommand attributes for final $defaultName)
+=======
+    public function __construct(protected Filesystem $filesystem, public int $bufferSize, protected string $streamWrapperPrefix, protected string $prefix)
+    {
+>>>>>>> 32f19d9 (Ran php cs fixer for code style)
     }
 
     public function addChunk(string $uuid, int $index, UploadedFile $chunk, string $original): mixed

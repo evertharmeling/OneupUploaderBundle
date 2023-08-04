@@ -19,8 +19,13 @@ class FilesystemStorage implements ChunkStorageInterface
     /**
      * @param string $directory
      */
+<<<<<<< HEAD
     public function __construct(protected string $directory) {
 >>>>>>> eb0cdf7 (1. Implemented the AsCommand attributes for final $defaultName)
+=======
+    public function __construct(protected string $directory)
+    {
+>>>>>>> 32f19d9 (Ran php cs fixer for code style)
     }
 
     public function clear(int $maxAge): void

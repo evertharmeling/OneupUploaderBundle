@@ -17,9 +17,6 @@ class PostChunkUploadEvent extends Event
     {
     }
 
-    /**
-     * @return mixed
-     */
     public function getChunk(): mixed
     {
         return $this->chunk;
