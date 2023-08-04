@@ -81,7 +81,7 @@ class OneupUploaderExtension extends Extension
         ;
     }
 
-    protected function processMapping(string $key, array & $mapping): array
+    protected function processMapping(string $key, array &$mapping): array
     {
         $mapping['max_size'] = $mapping['max_size'] < 0 || \is_string($mapping['max_size']) ?
             $this->getMaxUploadSize($mapping['max_size']) :
@@ -188,7 +188,7 @@ class OneupUploaderExtension extends Extension
         }
     }
 
-    protected function createStorageService(array & $config, string $key, bool $orphanage = false): Reference
+    protected function createStorageService(array &$config, string $key, bool $orphanage = false): Reference
     {
         $storageService = null;
 
@@ -285,7 +285,11 @@ class OneupUploaderExtension extends Extension
             ->addArgument($prefix);
     }
 
+<<<<<<< HEAD
     protected function getMaxUploadSize(mixed $input): int
+=======
+    protected function getMaxUploadSize($input): int
+>>>>>>> 2b60727 (Updated php_cs_fixer to v4)
     {
         $input = $this->getValueInBytes($input);
         $maxPost = $this->getValueInBytes(\ini_get('upload_max_filesize'));
@@ -298,7 +302,11 @@ class OneupUploaderExtension extends Extension
         return min(min($input, $maxPost), $maxFile);
     }
 
+<<<<<<< HEAD
     protected function getValueInBytes(mixed $input): int
+=======
+    protected function getValueInBytes($input): int
+>>>>>>> 2b60727 (Updated php_cs_fixer to v4)
     {
         // see: http://www.php.net/manual/en/function.ini-get.php
         if (!\is_scalar($input)) {

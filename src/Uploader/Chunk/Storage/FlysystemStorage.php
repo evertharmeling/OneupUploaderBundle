@@ -24,6 +24,7 @@ class FlysystemStorage implements ChunkStorageInterface
      */
     protected $unhandledChunk;
 
+<<<<<<< HEAD
     /**
      * @param Filesystem $filesystem
      * @param int        $bufferSize
@@ -34,6 +35,8 @@ class FlysystemStorage implements ChunkStorageInterface
     public function __construct(protected Filesystem $filesystem, public int $bufferSize, protected string $streamWrapperPrefix, protected string $prefix) {
 >>>>>>> eb0cdf7 (1. Implemented the AsCommand attributes for final $defaultName)
 =======
+=======
+>>>>>>> 2b60727 (Updated php_cs_fixer to v4)
     public function __construct(protected Filesystem $filesystem, public int $bufferSize, protected string $streamWrapperPrefix, protected string $prefix)
     {
 >>>>>>> 32f19d9 (Ran php cs fixer for code style)
