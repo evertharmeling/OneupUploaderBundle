@@ -20,9 +20,9 @@ class FlysystemStorage implements ChunkStorageInterface
     {
 =======
     /**
-     * @var array|null
+     * @var array
      */
-    protected $unhandledChunk;
+    protected array $unhandledChunk = [];
 
 <<<<<<< HEAD
     /**
