@@ -13,10 +13,25 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class FlysystemStorage implements ChunkStorageInterface
 {
+<<<<<<< HEAD
     protected array $unhandledChunk = [];
 
     public function __construct(protected Filesystem $filesystem, public int $bufferSize, protected string $streamWrapperPrefix, protected string $prefix)
     {
+=======
+    /**
+     * @var array|null
+     */
+    protected $unhandledChunk;
+
+    /**
+     * @param Filesystem $filesystem
+     * @param int $bufferSize
+     * @param string $streamWrapperPrefix
+     * @param string $prefix
+     */
+    public function __construct(protected Filesystem $filesystem, public int $bufferSize, protected string $streamWrapperPrefix, protected string $prefix) {
+>>>>>>> eb0cdf7 (1. Implemented the AsCommand attributes for final $defaultName)
     }
 
     public function addChunk(string $uuid, int $index, UploadedFile $chunk, string $original): mixed
