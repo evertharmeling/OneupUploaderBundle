@@ -20,16 +20,6 @@ class GaufretteStorage extends StreamManager implements ChunkStorageInterface
      */
     protected $unhandledChunk;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    /**
-     * @param string|null $streamWrapperPrefix
-     * @param string      $prefix
-     */
->>>>>>> eb0cdf7 (1. Implemented the AsCommand attributes for final $defaultName)
-=======
->>>>>>> 2b60727 (Updated php_cs_fixer to v4)
     public function __construct(FilesystemInterface $filesystem, int $bufferSize, protected ?string $streamWrapperPrefix, protected string $prefix)
     {
         $base = interface_exists(FilesystemInterface::class)
